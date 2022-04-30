@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeteaseCloudMusicTools</title>
+</head>
+
+<body>
+  <input type="text" name="" id="id-input">
+  <button id="submit-button">提交</button>
+  <textarea name="" id="lyric-textarea" cols="30" rows="10"></textarea>
+  <button id="save-button">保存</button>
+  <script>
+    const lyric_textarea = document.getElementById('lyric-textarea');
+    const save_button = document.getElementById('save-button');
+    const submit_button = document.getElementById('submit-button');
+
+    save_button.addEventListener('click', () => {
+      saveFile();
+    });
+
+    submit_button.addEventListener('click', async () => {
+      const input = document.getElementById('id-input');
+      const id = input.value || undefined;
+
+      try {
+        const lyric = await getLyric(id);
+        lyric_textarea.value = lyric;
+        console.log(lyric);
+      } catch (error) {
+        console.error(error)
+      }
+    });
+  </script>
+  <script src="./api.js"></script>
+  <script src="./tools.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "netease-cloud-music-tools",
+  "version": "0.0.1",
+  "description": "网易云音乐小工具",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcyuki/NeteaseCloudMusicTools.git"
+  },
+  "keywords": [
+    "neteaseCloudMusic"
+  ],
+  "author": "yuki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dcyuki/NeteaseCloudMusicTools/issues"
+  },
+  "homepage": "https://github.com/dcyuki/NeteaseCloudMusicTools#readme",
+  "devDependencies": {
+    "electron": "^18.2.0"
+  }
+}
